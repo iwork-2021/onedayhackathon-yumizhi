@@ -38,6 +38,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="imageV" destination="hCX-pg-RfV" id="ud0-GQ-PjL"/>
+                                    <segue destination="N84-JO-Nc8" kind="showDetail" identifier="presentBig" id="c1F-By-vMj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,6 +52,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1YD-fO-TxE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1302.8985507246377" y="-1302.4553571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LBb-oT-47p">
+            <objects>
+                <viewController id="N84-JO-Nc8" customClass="ViewController" customModule="MyAlbumApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WNj-CW-Tme">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxr-Z9-bzX">
+                                <rect key="frame" x="67" y="180" width="280" height="448"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DPg-Iu-HfO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rxr-Z9-bzX" firstAttribute="leading" secondItem="DPg-Iu-HfO" secondAttribute="leading" constant="67" id="0EM-CD-Q7W"/>
+                            <constraint firstItem="rxr-Z9-bzX" firstAttribute="centerX" secondItem="DPg-Iu-HfO" secondAttribute="centerX" id="SSQ-o5-Fjm"/>
+                            <constraint firstItem="rxr-Z9-bzX" firstAttribute="centerY" secondItem="DPg-Iu-HfO" secondAttribute="centerY" id="sMP-D1-FWI"/>
+                            <constraint firstItem="rxr-Z9-bzX" firstAttribute="top" secondItem="DPg-Iu-HfO" secondAttribute="top" constant="180" id="zno-tQ-Rop"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageVi" destination="rxr-Z9-bzX" id="VzR-Fo-8vP"/>
+                        <outlet property="tmpView" destination="WNj-CW-Tme" id="Lef-pV-GV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uo5-5m-LyZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.985507246377" y="-1432.3660714285713"/>
         </scene>
         <!--Album Controller-->
         <scene sceneID="Ggd-8w-7O8">
@@ -205,9 +236,9 @@
                                 </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uRZ-eP-eDN" userLabel="Results View">
-                                <rect key="frame" x="132" y="106" width="170" height="36.5"/>
+                                <rect key="frame" x="132" y="106" width="170" height="37"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PeZ-rl-4rJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="170" height="36"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="37"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Results go here)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOc-LJ-atT">

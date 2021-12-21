@@ -90,11 +90,11 @@ class ImageTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "presentImage"{
+        if segue.identifier == "presentBig"{
             print("gere!!!!!!!")
-            let controller:ImageTableViewController = segue.destination as! ImageTableViewController
-            let cell = sender as! snackClassTableViewCell
-            controller.imageClass = snackClassName[tableView.indexPath(for: cell)!.row]
+            let controller:ViewController = segue.destination as! ViewController
+            let cell = sender as! ImageTableViewCell
+            controller.imagetmp = cell.imageV.image
         }
     }
 }
